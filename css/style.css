@@ -21,8 +21,7 @@ body {
 }
 
 .container-with-padding {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding: 100px 0;
 }
 
 .header {}
@@ -37,18 +36,18 @@ body {
     justify-content: center;
     list-style: none;
     padding-left: 0;
-    margin: 0 0;
+    margin: 0;
     gap: 40px;
 }
 
 .menu_link {
     text-decoration: none;
     color: #828282;
+    transition: color 0.3s;
 }
 
 .menu_link:hover {
     color: #070707;
-    transition: 0.3s;
 }
 
 #home {
@@ -68,10 +67,7 @@ body {
 
 .container-about {
     width: 480px;
-    margin-top: 50px;
-    margin-bottom: 100px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 50px auto 100px auto;
 }
 
 h2 {
@@ -85,8 +81,19 @@ p {
     text-align: center;
 }
 
-.star_point {
+.star_point,
+.social_item {
     display: inline-block;
+    vertical-align: top;
+}
+
+.social_item {
+    margin-right: 40px;
+}
+
+.star_point:last-child,
+.social_item:last-child {
+    margin-right: 0;
 }
 
 .skill_block {
@@ -95,7 +102,8 @@ p {
     margin-right: 97px;
 }
 
-.skill_block:last-child {
+.skill_block:last-child,
+.social_item:last-child {
     margin-right: 0;
 }
 
@@ -106,20 +114,17 @@ p {
 }
 
 .star_img {
-    width: 26px;
     height: 26px;
+    width: 26px;
 }
 
 .skill_name {
     font-size: 14px;
-    margin-top: 25px;
-    margin-bottom: 60px;
+    margin: 25px 0 60px 0;
 }
 
-
 .menu_skills {
-    margin-top: 50px;
-    margin-bottom: 100px;
+    margin: 50px 0 100px 0;
     padding-left: 0;
     gap: 40px;
 }
@@ -127,11 +132,10 @@ p {
 .stars {
     padding-left: 0;
     list-style: none;
-    gap: 10px;
 }
 
 #last_stars {
-    padding-top: 20px;
+    padding-top: 16px;
 }
 
 .portfolio_list {
@@ -143,9 +147,7 @@ p {
 .portfolio_description {
     margin-top: 40px;
     text-decoration: underline;
-
 }
-
 
 .portfolio_item {
     display: inline-block;
@@ -158,17 +160,28 @@ p {
 }
 
 #contacts {
-
+    text-align: center;
 }
 
-.social_item {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 50px;
+#contacts > * {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
 }
 
-.social_item:last-child {
-    margin-right: 0;
+#contacts > *:last-child {
+    margin-bottom: 0;
+}
+
+.contacts_text {
+    margin-top: 20px;
+}
+
+.socials {
+    margin-top: 30px;
+    margin-bottom: 0;
+    padding-left: 0;
 }
 
 .social_img {
@@ -185,4 +198,18 @@ p {
     font-size: 16px;
     border-radius: 999px;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+#send_btn:hover {
+    background-color: #333;
+}
+
+#send_btn:active {
+    transform: scale(0.95);
+}
+
+.social-text {
+    font-size: 14px;
+    color: #828282;
 }
